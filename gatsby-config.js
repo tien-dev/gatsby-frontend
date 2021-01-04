@@ -13,7 +13,7 @@ module.exports = {
 
       options: {
         apiURL: "https://oii-demobackend.tk",
-        contentTypes: ["user"],
+        // contentTypes: ["users"],
         singleTypes: ["homepage", "navigation", "site-setting"],
         queryLimit: 1000,
       },
