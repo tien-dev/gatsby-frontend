@@ -1,5 +1,5 @@
 import * as React from "react"
-import { StaticQuery, graphql } from 'gatsby';
+// import { StaticQuery, graphql } from 'gatsby';
 
 // styles
 const pageStyles = {
