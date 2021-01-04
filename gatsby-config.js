@@ -5,18 +5,18 @@ module.exports = {
       resolve: "gatsby-source-strapi",
       // options: {
       //   apiURL: "http://localhost:1337",
-      //   contentTypes: [
-      //     "category",
-      //   ],
+      //   contentTypes: ["category"],
+      //   // singleTypes: ["tesy-type"],
       //   queryLimit: 1000,
       // },
 
       options: {
         apiURL: "https://oii-demobackend.tk",
-        contentTypes: ["users"],
-        singleTypes: ["homepage", "navigation", "site-setting"],
+        contentTypes: ["user"],
+        // singleTypes: ["homepage", "navigation", "site-setting"],
         queryLimit: 1000,
       },
+
     },
   ],  
 };
