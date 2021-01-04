@@ -1,5 +1,5 @@
 import * as React from "react"
-// import { StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 
 // styles
 const pageStyles = {
@@ -8,22 +8,23 @@ const pageStyles = {
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 
-// const query = graphql`
-//   query {
-//     allStrapiCategory {
-//       edges {
-//         node {
-//           Name
-//           Description
-//           strapiId
-//         }
-//       }
-//     }
-//   }
-// `;
+const query = graphql`
+  query {
+    allStrapiUser {
+      edges {
+        node {
+          strapiId
+        }
+      }
+    }
+  }
+`;
 
 // markup
 const IndexPage = () => {
+
+  console.log('>>>>> test query: ', query)
+
   return (
     <main style={pageStyles}>
       <title>Home Page</title>
