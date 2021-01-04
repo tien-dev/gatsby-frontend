@@ -1,6 +1,6 @@
 import * as React from "react"
 // import { StaticQuery, graphql } from 'gatsby';
-import axios from 'axios'
+// import axios from 'axios'
 
 // styles
 const pageStyles = {
@@ -39,14 +39,14 @@ const pageStyles = {
 const IndexPage = () => {
 
   // console.log('>>>>> test query: ', query)
-  let SERVER_URL = "https://oii-demobackend.tk";
+  // let SERVER_URL = "https://oii-demobackend.tk";
 
-  await axios
-    .get(SERVER_URL + "/site-setting")
-    .then(response => {
-      console.log("get site-setting response", response.data);
-    })
-    .catch(error => console.log("Error when connect to API 3", error));
+  // await axios
+  //   .get(SERVER_URL + "/site-setting")
+  //   .then(response => {
+  //     console.log("get site-setting response", response.data);
+  //   })
+  //   .catch(error => console.log("Error when connect to API 3", error));
 
   return (
     <main style={pageStyles}>
