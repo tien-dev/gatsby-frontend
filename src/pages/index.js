@@ -34,7 +34,7 @@ const query = graphql`
       }
     }
 
-    strapiSite-setting {
+    strapiSiteSetting {
       id
       siteTitle
     }
@@ -79,7 +79,7 @@ const IndexPage = () => {
           </ul>
 
           <div>
-            {data.strapiSite-setting.siteTitle}
+            {data.strapiSiteSetting.siteTitle}
           </div></>
         )}
       />
