@@ -1,3 +1,13 @@
+// require("dotenv").config({
+//   path: '.env',
+// });
+
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV || 'development'}`
+})
+
+const isProd = process.env.NODE_ENV === 'production'
+
 module.exports = {
   plugins: [
     "gatsby-plugin-styled-components",
@@ -11,9 +21,9 @@ module.exports = {
       // },
 
       options: {
-        apiURL: "https://oii-demobackend.tk",
+        apiURL: process.env.API_URL || "http://localhost:1337",
         contentTypes: ["user"],
-        singleTypes: ["homepage", "navigation", "site-setting"],
+        singleTypes: isProd ? ["homepage", "navigation", "site-setting"] : ["test-type"],
         queryLimit: 1000,
       },
 

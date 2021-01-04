@@ -10,19 +10,6 @@ const pageStyles = {
 }
 
 // test query by Graphql
-// const query = graphql`
-//   query {
-//     allStrapiUser {
-//       edges {
-//         node {
-//           id
-//           username
-//         }
-//       }
-//     }
-//   }
-// `;
-
 const query = graphql`
   query {
     allStrapiUser {
@@ -33,11 +20,26 @@ const query = graphql`
         }
       }
     }
-
-    strapiSiteSetting {
-    }
   }
 `;
+
+// const query = graphql`
+//   query {
+//     allStrapiUser {
+//       edges {
+//         node {
+//           id
+//           username
+//         }
+//       }
+//     }
+
+//     strapiSiteSetting {
+//       id
+//       siteTitle
+//     }
+//   }
+// `;
 
 // markup
 const IndexPage = () => {
@@ -76,9 +78,10 @@ const IndexPage = () => {
             ))}
           </ul>
 
-          <div>
+          {/* <div>
             {data.strapiSiteSetting.siteTitle}
-          </div></>
+          </div> */}
+          </>
         )}
       />
     </main>
