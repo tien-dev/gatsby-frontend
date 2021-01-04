@@ -10,9 +10,11 @@ const pageStyles = {
 
 const query = graphql`
   query {
-    allStrapiUser {
+    allStrapiCategory {
       edges {
         node {
+          Name
+          Description
           strapiId
         }
       }
@@ -22,15 +24,12 @@ const query = graphql`
 
 // markup
 const IndexPage = () => {
-
-  console.log('>>>>> test query: ', query)
-
   return (
     <main style={pageStyles}>
       <title>Home Page</title>
       <h1>Test Query</h1>
 
-      {/* <StaticQuery
+      <StaticQuery
         query={query}
         render={data => (
           <ul>
@@ -39,7 +38,7 @@ const IndexPage = () => {
             ))}
           </ul>
         )}
-      /> */}
+      />
     </main>
   )
 }
