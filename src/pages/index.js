@@ -21,26 +21,13 @@ const query = graphql`
         }
       }
     }
+
+    strapiSiteSetting {
+      id
+      siteTitle
+    }
   }
 `;
-
-// const query = graphql`
-//   query {
-//     allStrapiUser {
-//       edges {
-//         node {
-//           id
-//           username
-//         }
-//       }
-//     }
-
-//     strapiSiteSetting {
-//       id
-//       siteTitle
-//     }
-//   }
-// `;
 
 // markup
 const IndexPage = () => {
@@ -79,9 +66,9 @@ const IndexPage = () => {
             ))}
           </ul>
 
-          {/* <div>
+          <div>
             {data.strapiSiteSetting.siteTitle}
-          </div> */}
+          </div>
           </>
         )}
       />
