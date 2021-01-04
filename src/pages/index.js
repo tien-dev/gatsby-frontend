@@ -35,7 +35,6 @@ const query = graphql`
     }
 
     strapiSiteSetting {
-      ...everything
     }
   }
 `;
