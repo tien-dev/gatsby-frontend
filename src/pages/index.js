@@ -10,6 +10,19 @@ const pageStyles = {
 }
 
 // test query by Graphql
+// const query = graphql`
+//   query {
+//     allStrapiUser {
+//       edges {
+//         node {
+//           id
+//           username
+//         }
+//       }
+//     }
+//   }
+// `;
+
 const query = graphql`
   query {
     allStrapiUser {
@@ -19,6 +32,11 @@ const query = graphql`
           username
         }
       }
+    }
+
+    strapiSite-setting {
+      id
+      siteTitle
     }
   }
 `;
@@ -53,12 +71,16 @@ const IndexPage = () => {
 
       <StaticQuery
         query={query}
-        render={data => (
+        render={data => (<>
           <ul>
             {data.allStrapiUser.edges.map(user => (
               <li key={user.node.id}>{user.node.username}</li>
             ))}
           </ul>
+
+          <div>
+            {data.strapiSite-setting.siteTitle}
+          </div></>
         )}
       />
     </main>
