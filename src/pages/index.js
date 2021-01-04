@@ -35,8 +35,7 @@ const query = graphql`
     }
 
     strapiSiteSetting {
-      id
-      siteTitle
+      *
     }
   }
 `;
