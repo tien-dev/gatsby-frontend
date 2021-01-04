@@ -12,7 +12,7 @@ module.exports = {
       // },
 
       options: {
-        apiURL: "https://178.128.239.190",
+        apiURL: "https://oii-demobackend.tk",
         contentTypes: ["user"],
         singleTypes: ["homepage", "navigation", "site-setting"],
         queryLimit: 1000,
