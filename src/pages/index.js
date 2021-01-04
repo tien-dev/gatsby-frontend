@@ -9,20 +9,15 @@ const pageStyles = {
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 
-// test query by Graphql
-const query = graphql`
-  query {
-    allStrapiUser {
-      edges {
-        node {
-          id
-          username
-        }
-      }
-    }
-  }
-`;
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV || 'development'}`
+})
+
+const isProd = process.env.NODE_ENV === 'production'
+console.log('>>>> isProd: ', isProd)
+
+// test query by Graphql
 // const query = graphql`
 //   query {
 //     allStrapiUser {
@@ -33,13 +28,26 @@ const query = graphql`
 //         }
 //       }
 //     }
-
-//     strapiSiteSetting {
-//       id
-//       siteTitle
-//     }
 //   }
 // `;
+
+const query = graphql`
+  query {
+    allStrapiUser {
+      edges {
+        node {
+          id
+          username
+        }
+      }
+    }
+
+    strapiSiteSetting {
+      id
+      siteTitle
+    }
+  }
+`;
 
 // markup
 const IndexPage = () => {
