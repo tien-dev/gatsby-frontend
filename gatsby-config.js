@@ -1,9 +1,13 @@
 
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV || 'development'}`
-})
+// require('dotenv').config({
+//   path: `.env.${process.env.NODE_ENV || 'development'}`
+// })
 
-const isProd = process.env.NODE_ENV === 'production'
+// const isProd = process.env.NODE_ENV === 'production'
+
+require('dotenv').config({
+  path: `.env`
+})
 
 module.exports = {
   plugins: [
@@ -20,7 +24,7 @@ module.exports = {
       options: {
         apiURL: process.env.API_URL || "http://localhost:1337",
         contentTypes: ["user"],
-        singleTypes: isProd ? ["homepage", "navigation", "site-setting"] : ["test-type"],
+        singleTypes: ["homepage", "navigation", "site-setting"],
         queryLimit: 1000,
       },
 
