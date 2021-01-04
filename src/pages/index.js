@@ -10,13 +10,13 @@ const pageStyles = {
 }
 
 // test query by Graphql
-const query = graphql`
-  query {
-    strapiSitesetting {
-      id
-    }
-  }
-`;
+// const query = graphql`
+//   query {
+//     strapiSitesetting {
+//       id
+//     }
+//   }
+// `;
 
 // markup
 const IndexPage = () => {
@@ -46,7 +46,7 @@ const IndexPage = () => {
       <title>Home Page</title>
       <h1>Test Query</h1>
 
-      <StaticQuery
+      {/* <StaticQuery
         query={query}
         render={data => (
           // <ul>
@@ -54,12 +54,8 @@ const IndexPage = () => {
           //     <li key={category.node.strapiId}>{category.node.Name} : {category.node.Description}</li>
           //   ))}
           // </ul>
-
-          <ul>
-            {data.strapiSitesetting.id}
-          </ul>
         )}
-      />
+      /> */}
     </main>
   )
 }
